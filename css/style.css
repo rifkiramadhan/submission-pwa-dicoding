@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@700&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body {
+	font-family: 'Quicksand', sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.container{
+	flex: 1 0 auto;
+}
+
+.jumbotron {
+	font-size: 20px;
+	padding: 60px;
+	background: url('/images/background.png') ;
+	text-align: center;
+}
+
+.footer  {
+	padding: 20px;	
+	text-align: center;
+	font-weight: bold;
+}
+
+.border {
+	border: solid 0.08em #eee;
+	border-radius: .8em;
+	padding: .2em .25em .15em; 
+}

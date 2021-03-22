@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>JASBOLIS</title>
+        <meta name="description" content="LaLiga Spains League" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="#FFA500" />
+        <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="shortcut icon" href="iconlogo.png">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body class="orange lighten-2">
+        <header>
+            <nav class="red darken-4" role="navigation">
+                <div class="nav-wrapper container">
+                    <a href="#" class="brand-logo center" style="font-family: 'Righteous', cursive;" id="logo-container">JASBOLIS</a>
+    
+                    <ul class="sidenav" id="nav-mobile"></ul>
+                </div>
+            </nav>
+            <div class="jumbotron red darken-4 white-text">
+                <h1  class="center" style="font-family: 'Lemonada', cursive; font-family: 'Righteous', cursive;">Jadwal Sepak Bola Liga Spanyol</h1>
+                <img width="200" height="200" src="icon.png">
+                <p lang="" class="center" style="font-family: 'Permanent Marker', cursive;" translate="no" >Berikut ini adalah jadwal pertandingan sepak bola liga Spanyol.</p>
+            </div>
+        </header>
+        
+       <!-- Navigasi -->
+        <nav class="red darken-4" role="navigation">
+            <div class="nav-wrapper container">
+                <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+
+                <ul class="topnav left hide-on-med-and-down"></ul>
+                <ul class="sidenav" id="nav-mobile"></ul>
+            </div>
+        </nav>
+        <!-- Akhir Navigasi -->
+
+        <div class="container" id="body-content"></div>
+        <!-- Akhir Container -->
+        <!-- Some Scripts -->
+        <script src="js/nav.js"></script>
+        <script src="js/api.js"></script>
+        <script src="js/idb.js"></script>
+        <script src="js/db.js"></script>
+        <script src="js/sw-regist.js"></script>
+        <script src="js/date.js"></script>
+        <script src="js/klasemen.js"></script>
+        <script src="js/pertandingan.js"></script>
+        <script src="js/tim.js"></script>
+
+        <script type="text/javascript" src="https://unpkg.com/snarkdown@1.0.2/dist/snarkdown.umd.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+        <!-- Akhir Some Scripts -->
+
+        <footer class="footer red darken-4 white-text">
+            <div class="footer-copyright">
+                <div class="container">
+                Jadwal Sepak Bola Liga Spanyol (JASBOLIS)
+                </div>
+        </footer>
+    </body>
+</html>

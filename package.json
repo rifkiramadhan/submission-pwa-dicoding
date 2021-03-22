@@ -1,0 +1,14 @@
+{
+  "name": "submission",
+  "version": "1.0.0",
+  "description": "LaLiga Spains League",
+  "main": "push.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rifkiramadhan",
+  "license": "ISC",
+  "dependencies": {
+    "web-push": "^3.4.4"
+  }
+}

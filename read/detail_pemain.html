@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Pemain</title>
+        <meta name="description" content="LaLiga Spains League" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/css/materialize.min.css">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="#FFA500" />
+        <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png">
+        <link rel="shortcut icon" href="/iconlogo.png">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+
+    <body class="orange lighten-2">
+        <!-- Navigasi -->
+        <nav class="red darken-4" role="navigation">
+            <div class="nav-wrapper container">
+                <a href="#" class="brand-logo" id="logo-container">Pemain</a>
+                <a href="javascript:back()" class="sidenav-trigger" data-target="nav-mobile">
+                    <i class="material-icons">arrow_back</i>
+                </a>
+                <ul class="topnav right hide-on-med-and-down"></ul>
+                <ul class="sidenav" id="nav-mobile"></ul>
+            </div>
+        </nav>
+        <!-- Akhir Navigasi -->
+
+        <!-- Content -->
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <br><br>
+                        <div class="card-content">
+                            <div class="center-align" id="preloader">
+                                <div class="preloader-wrapper big active">
+                                    <div class="spinner-layer spinner-blue">
+                                        <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                        </div><div class="gap-patch">
+                                            <div class="circle"></div>
+                                        </div><div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div id="tblLihatPemain"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Akhir Content -->
+
+        <!-- FAB -->
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large green" id="fabSaves">
+                <i class="large material-icons">save</i>
+            </a>
+        </div>
+        <!-- Akhir FAB -->
+
+        <!-- Some Scripts -->
+        <script type="text/javascript" src="https://unpkg.com/snarkdown@1.0.2/dist/snarkdown.umd.js"></script>
+        <script src="/js/materialize.min.js"></script>
+        <script src="/js/api.js"></script>
+        <script src="/js/idb.js"></script>
+        <script src="/js/db.js"></script>
+
+        <script src="/js/sw-regist.js"></script>
+        <script src="/js/date.js"></script>
+
+        <script src="/js/klasemen.js"></script>
+        <script src="/js/pertandingan.js"></script>
+        <script src="/js/tim.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                var urlParams = new URLSearchParams(window.location.search);
+                var playerID = Number(urlParams.get("id"));
+                var item = getLihatPemain(playerID);
+
+                var btnSaves = document.getElementById("fabSaves");
+
+                (async() => {
+                    var check = await savesData(playerID, datanamaPemain);
+                    if (check) {
+                        btnSaves.style.display = "none";
+                    }
+                })();
+
+                btnSaves.onclick = () => {
+                    item.then((player) => {
+                        addSavesID(player, datanamaPemain);
+                    });
+                    btnSaves.style.display = "none";
+                };
+            });
+        </script>
+        <!-- Akhir Some Scripts -->
+
+        <footer class="footer red darken-4 white-text">
+            <div class="footer-copyright">
+                <div class="container">
+                Jadwal Sepak Bola Liga Spanyol (JASBOLIS)
+                </div>
+        </footer>
+    </body>
+</html>
