@@ -2,7 +2,7 @@
 ![](screenshot/JASBOLIS.png)
 
 # Performa Aplikasi
-![](screenshot/Performance.png)
+![](screenshot/Performance.PNG)
 
 ## Referensi
 - Modul Bacaan	: https://www.dicoding.com/academies/74
