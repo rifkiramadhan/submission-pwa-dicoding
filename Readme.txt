@@ -1,2 +1,2 @@
-# Alur Aplikasi
-![Screenshot](https://drive.google.com/file/d/1L-gP_FUmosn7t3yvbg-dVt8wkmC8f3Mv/view?usp=sharing)
+## Alur Aplikasi
+![JASBOLIS](https://user-images.githubusercontent.com/45382478/115151931-46036480-a099-11eb-82b2-2d60165701c8.png)
